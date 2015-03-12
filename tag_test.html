@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="css/cl.tag.css">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/cl.tag.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				var tags = $("#tags");
+				tags.tag({
+					"data" : ["312","3123"]
+				});
+				
+				$(".add").click(function(){
+					var result = tags.val();
+					return false;
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<div class="field">
+				<label>Tags</label>
+				<div id="tags"></div>
+				<label>name</label>
+				<input type="text" />
+				<a class="add" href="#">submit</a>
+			</div>
+		</div>
+	</body>
+</html>
